@@ -4,6 +4,7 @@
         "module": "commonjs",
         "strictNullChecks": true,
         "rootDir": "src/ts",
-        "outDir": "src/js"
+        "outDir": "src/js",
+        "removeComments": true
     }
 }
