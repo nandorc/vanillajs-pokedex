@@ -1,0 +1,142 @@
+:root {
+    --font-primary: 'Montserrat', sans-serif;
+    --font-special: 'Sriracha', cursive;
+    --color-font-primary: white;
+    --color-bg-primary: darkred;
+    --color-bg-secondary: rgba(111, 156, 68, 0.459);
+    --color-bg-contrast: white;
+}
+
+body,
+.m-page-title_text,
+.o-pokemon-info_name_text,
+.m-stat_label,
+.m-others-title {
+    margin: 0;
+    line-height: 1;
+}
+
+body {
+    font-family: var(--font-primary);
+}
+
+header,
+#m-page-title,
+.o-pokemon-info_name,
+.m-stat,
+footer,
+.o-others,
+.m-other {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: var(--color-bg-primary);
+    padding: 1vh;
+    color: var(--color-font-primary);
+}
+
+.m-page-title_icon {
+    font-size: 2.5rem;
+}
+
+.m-page-title_text {
+    font-family: var(--font-special);
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 2vh 3vh;
+    background-color: var(--color-bg-secondary);
+}
+
+.o-pokemon-info_name,
+.o-pokemon-stats {
+    box-sizing: border-box;
+    width: 90%;
+    background-color: var(--color-bg-contrast);
+    border-radius: 1.5vh;
+    margin: 0 auto;
+}
+
+.o-pokemon-info_name {
+    padding: 1vh 5vh;
+}
+
+.o-pokemon-info_name_icon {
+    font-size: 1.5rem;
+}
+
+.o-pokemon-info_name_text {
+    font-size: 1rem;
+}
+
+.o-pokemon-info_image,
+.o-pokemon-stats {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.o-pokemon-info_image {
+    z-index: 1;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+
+.o-pokemon-stats {
+    z-index: 0;
+    padding: 5vh;
+    padding-top: 10vh;
+    margin-top: -7vh;
+}
+
+.m-stat {
+    margin-bottom: 2vh;
+}
+
+.m-stat:last-child {
+    margin-bottom: 0;
+}
+
+.m-stat_label,
+.m-stat_value {
+    flex: 1;
+    font-size: 1rem;
+}
+
+footer {
+    flex-direction: column;
+    padding: 2vh;
+}
+
+.m-others-title {
+    margin-bottom: 2vh;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.o-others {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.m-other {
+    width: 12vh;
+    height: 12vh;
+    padding: 1.5vh;
+    border: 0;
+    border-radius: 2vh;
+    margin: 2vh 0;
+    background-color: var(--color-bg-secondary);
+    overflow: hidden;
+}
+
+.m-other_image {
+    width: 100%;
+}

@@ -15,11 +15,10 @@ interface IActivePokemonStat {
     label: HTMLHeadingElement;
     value: HTMLElement;
 }
-
 // Classes
 class ActivePokemonName {
     text: HTMLHeadingElement;
-    icon: HTMLImageElement;
+    icon: HTMLSpanElement;
     constructor(name: string, type?: string) {
         this.buildText(name);
         if (type) {
@@ -34,9 +33,12 @@ class ActivePokemonName {
         }
     }
     private buildIcon(type: string): void {
-        const icon = document.querySelector<HTMLImageElement>('.o-pokemon-info_name_icon');
+        const icon = document.querySelector<HTMLSpanElement>('.o-pokemon-info_name_icon');
         if (null !== icon) {
             icon.setAttribute('src', `img/icons/${type.toLowerCase()}.svg`);
+            if ('fire' === type.toLowerCase()) {
+                icon.innerHTML = 'local_fire_department';
+            }
             this.icon = icon;
         }
     }

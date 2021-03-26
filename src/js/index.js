@@ -16,6 +16,9 @@ class ActivePokemonName {
         const icon = document.querySelector('.o-pokemon-info_name_icon');
         if (null !== icon) {
             icon.setAttribute('src', `img/icons/${type.toLowerCase()}.svg`);
+            if ('fire' === type.toLowerCase()) {
+                icon.innerHTML = 'local_fire_department';
+            }
             this.icon = icon;
         }
     }
