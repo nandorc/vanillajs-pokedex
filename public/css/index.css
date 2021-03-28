@@ -4,6 +4,7 @@
     --color-font-primary: white;
     --color-bg-primary: darkred;
     --color-bg-secondary: rgba(111, 156, 68, 0.459);
+    --color-bg-secondary-focus: rgba(58, 82, 36, 0.808);
     --color-bg-contrast: white;
 }
 
@@ -135,8 +136,59 @@ footer {
     margin: 2vh 0;
     background-color: var(--color-bg-secondary);
     overflow: hidden;
+    transition: all 0.5s ease;
 }
 
 .m-other_image {
     width: 100%;
+}
+
+@media (min-width: 570px) {
+    main,
+    footer,
+    .o-others {
+        justify-content: space-evenly;
+    }
+    header {
+        justify-content: flex-start;
+        padding-left: 2vh;
+    }
+    main {
+        display: flex;
+        align-items: flex-start;
+        padding: 2vh 0;
+    }
+    .o-pokemon-info {
+        width: 50%;
+    }
+    .o-pokemon-info_name {
+        width: 70%;
+    }
+    .o-pokemon-stats {
+        width: 30%;
+        margin: 0;
+        padding: 3vh;
+    }
+    .m-stat {
+        display: inline-flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 2vh 0;
+    }
+    .m-stat_value {
+        margin-top: 1vh;
+        font-size: 1.5rem;
+    }
+    footer {
+        flex-direction: row;
+    }
+    .m-other {
+        margin: 0;
+        cursor: pointer;
+    }
+    .m-other:hover {
+        width: 13vh;
+        height: 13vh;
+        background-color: var(--color-bg-secondary-focus);
+    }
 }
